@@ -17,12 +17,18 @@
             </intent-filter>
         </activity>
 
-        <!-- decalre process atrribute to use a seperate process for a mask activity -->
+        <!-- declare process attribute to use a seperate process for a mask activity -->
         <activity android:name=".MaskActivity"
             android:process="com.example.chansuk.dozetester.empty"/>
 
         <service
+            android:name=".MyDummyForegroundService"/>
+
+        <service
+            android:process="com.example.chansuk.dozetester.service"
             android:name=".MyNetworkService"/>
+
+
     </application>
 
 </manifest>

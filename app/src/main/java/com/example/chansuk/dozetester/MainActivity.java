@@ -24,10 +24,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startNetworkService() {
-         startService(new Intent(this, MyNetworkService.class));
+        startService(new Intent(this, MyNetworkService.class));
+        startService(new Intent(this, MyDummyForegroundService.class));
     }
 
     private void stopNetworkService() {
         stopService(new Intent(this, MyNetworkService.class));
+        stopService(new Intent(this, MyDummyForegroundService.class));
     }
 }
